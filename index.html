@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Lesson_11</title>
+</head>
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <div class="header__title">
+               Пізнай Україну
+            </div>
+            <div class="header__text">
+               тисни на область та дізнайся декілька цікавих фактів про кожну область України
+            </div>
+         </div>
+      </header>
+      <main class="main">
+         <div class="map" id="map">
+            <div class="map__regions">
+               <div class="map__region sumy">
+                  <div class="sumy__position">
+                     <div class="sumy__region sumy__region--blur">
+                        <img src="img/regions/sumy.svg" alt="Сумська обл.">
+                     </div>
+                     <a href="#sumy" title="Сумська область" class="sumy__region sumy__region--scale">
+                        <img src="img/regions/sumy.svg" alt="Сумська обл.">
+                        <p>Сумська <br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region chernihiv">
+                  <div class="chernihiv__position">
+                     <div class="chernihiv__region chernihiv__region--blur">
+                        <img src="img/regions/сhernihiv.svg" alt="Сумська обл.">
+                     </div>
+                     <a href="#chernihiv" title="Чернігівська область" class="chernihiv__region chernihiv__region--scale">
+                        <img src="img/regions/сhernihiv.svg" alt="Чернігівська обл.">
+                        <p>Чернігівська <br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region kyiv">
+                  <div class="kyiv__position">
+                     <div class="kyiv__region kyiv__region--blur">
+                        <img src="img/regions/kyiv.svg" alt="Київська обл.">
+                     </div>
+                     <a href="#kyiv" title="Київська область" class="kyiv__region kyiv__region--scale">
+                        <img src="img/regions/kyiv.svg" alt="Київська обл.">
+                        <p>Київська <br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region chernivci">
+                  <div class="chernivci__position">
+                     <div class="chernivci__region chernivci__region--blur">
+                        <img src="img/regions/chernivci.svg" alt="Чернівецька обл.">
+                     </div>
+                     <a href="#chernivci" title="Чернівецька область" class="chernivci__region chernivci__region--scale">
+                        <img src="img/regions/chernivci.svg" alt="Чернівецька обл.">
+                        <p>Чернівецька <br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region cherkasy">
+                  <div class="cherkasy__position">
+                     <div class="cherkasy__region cherkasy__region--blur">
+                        <img src="img/regions/cherkasy.svg" alt="Черкаська обл.">
+                     </div>
+                     <a href="#cherkasy" title="Черкаська область" class="cherkasy__region cherkasy__region--scale">
+                        <img src="img/regions/cherkasy.svg" alt="Черкаська обл.">
+                        <p>Черкаська <br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region khmelnytskyi">
+                  <div class="khmelnytskyi__position">
+                     <div class="khmelnytskyi__region khmelnytskyi__region--blur">
+                        <img src="img/regions/khmelnytskyi.svg" alt="Хмельницька обл.">
+                     </div>
+                     <a href="#khmelnytskyi" title="Хмельницька область" class="khmelnytskyi__region khmelnytskyi__region--scale">
+                        <img src="img/regions/khmelnytskyi.svg" alt="Хмельницька обл.">
+                        <p>Хмельницька <br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region kherson">
+                  <div class="kherson__position">
+                     <div class="kherson__region kherson__region--blur">
+                        <img src="img/regions/kherson.svg" alt="Херсонська обл.">
+                     </div>
+                     <a href="#kherson" title="Херсонська область" class="kherson__region kherson__region--scale">
+                        <img src="img/regions/kherson.svg" alt="Херсонська обл.">
+                        <p>Херсонська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region kharkiv">
+                  <div class="kharkiv__position">
+                     <div class="kharkiv__region kharkiv__region--blur">
+                        <img src="img/regions/kharkiv.svg" alt="Харківська обл.">
+                     </div>
+                     <a href="#kharkiv" title="Харківська область" class="kharkiv__region kharkiv__region--scale">
+                        <img src="img/regions/kharkiv.svg" alt="Харківська обл.">
+                        <p>Харківська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region ternopil">
+                  <div class="ternopil__position">
+                     <div class="ternopil__region ternopil__region--blur">
+                        <img src="img/regions/ternopil.svg" alt="Тернопільська обл.">
+                     </div>
+                     <a href="#ternopil" title="Тернопільська область" class="ternopil__region ternopil__region--scale">
+                        <img src="img/regions/ternopil.svg" alt="Тернопільська обл.">
+                        <p>Тернопільська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region rivne">
+                  <div class="rivne__position">
+                     <div class="rivne__region rivne__region--blur">
+                        <img src="img/regions/rivne.svg" alt="Рівненська обл.">
+                     </div>
+                     <a href="#rivne" title="Рівненська область" class="rivne__region rivne__region--scale">
+                        <img src="img/regions/rivne.svg" alt="Рівненська обл.">
+                        <p>Рівненська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region poltava">
+                  <div class="poltava__position">
+                     <div class="poltava__region poltava__region--blur">
+                        <img src="img/regions/poltava.svg" alt="Полтавська обл.">
+                     </div>
+                     <a href="#poltava" title="Полтавська область" class="poltava__region poltava__region--scale">
+                        <img src="img/regions/poltava.svg" alt="Полтавська обл.">
+                        <p>Полтавська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region odessa">
+                  <div class="odessa__position">
+                     <div class="odessa__region odessa__region--blur">
+                        <img src="img/regions/odessa.svg" alt="Одеська обл.">
+                     </div>
+                     <a href="#odessa" title="Одеська область" class="odessa__region odessa__region--scale">
+                        <img src="img/regions/odessa.svg" alt="Одеська обл.">
+                        <p>Одеська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region mykolayiv">
+                  <div class="mykolayiv__position">
+                     <div class="mykolayiv__region mykolayiv__region--blur">
+                        <img src="img/regions/mykolayiv.svg" alt="Миколаївська обл.">
+                     </div>
+                     <a href="#mykolayiv" title="Миколаївська область" class="mykolayiv__region mykolayiv__region--scale">
+                        <img src="img/regions/mykolayiv.svg" alt="Миколаївська обл.">
+                        <p>Миколаївська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region lviv">
+                  <div class="lviv__position">
+                     <div class="lviv__region lviv__region--blur">
+                        <img src="img/regions/lviv.svg" alt="Львівська обл.">
+                     </div>
+                     <a href="#lviv" title="Львівська область" class="lviv__region lviv__region--scale">
+                        <img src="img/regions/lviv.svg" alt="Львівська обл.">
+                        <p>Львівська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region luhansk">
+                  <div class="luhansk__position">
+                     <div class="luhansk__region luhansk__region--blur">
+                        <img src="img/regions/luhansk.svg" alt="Луганська обл.">
+                     </div>
+                     <a href="#luhansk" title="Луганська область" class="luhansk__region luhansk__region--scale">
+                        <img src="img/regions/luhansk.svg" alt="Луганська обл.">
+                        <p>Луганська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region kirovohrad">
+                  <div class="kirovohrad__position">
+                     <div class="kirovohrad__region kirovohrad__region--blur">
+                        <img src="img/regions/kirovohrad.svg" alt="Кіровоградська обл.">
+                     </div>
+                     <a href="#kirovohrad" title="Кіровоградська область" class="kirovohrad__region kirovohrad__region--scale">
+                        <img src="img/regions/kirovohrad.svg" alt="Кіровоградська обл.">
+                        <p>Кіровоградська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region ivano-frankivsk">
+                  <div class="ivano-frankivsk__position">
+                     <div class="ivano-frankivsk__region ivano-frankivsk__region--blur">
+                        <img src="img/regions/ivano-frankivsk.svg" alt="Івано-Франківська обл.">
+                     </div>
+                     <a href="#ivano-frankivsk" title="Івано-Франківська область" class="ivano-frankivsk__region ivano-frankivsk__region--scale">
+                        <img src="img/regions/ivano-frankivsk.svg" alt="Івано-Франківська обл.">
+                        <p>Івано-Франківська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region zaporizhzhya">
+                  <div class="zaporizhzhya__position">
+                     <div class="zaporizhzhya__region zaporizhzhya__region--blur">
+                        <img src="img/regions/zaporizhzhya.svg" alt="Запорізька обл.">
+                     </div>
+                     <a href="#zaporizhzhya" title="Запорізька область"
+                        class="zaporizhzhya__region zaporizhzhya__region--scale">
+                        <img src="img/regions/zaporizhzhya.svg" alt="Запорізька обл.">
+                        <p>Запорізька<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region zakarpattia">
+                  <div class="zakarpattia__position">
+                     <div class="zakarpattia__region zakarpattia__region--blur">
+                        <img src="img/regions/zakarpattia.svg" alt="Закарпатська обл.">
+                     </div>
+                     <a href="#zakarpattia" title="Закарпатська область" class="zakarpattia__region zakarpattia__region--scale">
+                        <img src="img/regions/zakarpattia.svg" alt="Закарпатська обл.">
+                        <p>Закарпатська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region zhytomyr">
+                  <div class="zhytomyr__position">
+                     <div class="zhytomyr__region zhytomyr__region--blur">
+                        <img src="img/regions/zhytomyr.svg" alt="Житомирська обл.">
+                     </div>
+                     <a href="#zhytomyr" title="Житомирська область" class="zhytomyr__region zhytomyr__region--scale">
+                        <img src="img/regions/zhytomyr.svg" alt="Житомирська обл.">
+                        <p>Житомирська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region donetsk">
+                  <div class="donetsk__position">
+                     <div class="donetsk__region donetsk__region--blur">
+                        <img src="img/regions/donetsk.svg" alt="Донецька обл.">
+                     </div>
+                     <a href="#donetsk" title="Донецька область" class="donetsk__region donetsk__region--scale">
+                        <img src="img/regions/donetsk.svg" alt="Донецька обл.">
+                        <p>Донецька<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region dnipro">
+                  <div class="dnipro__position">
+                     <div class="dnipro__region dnipro__region--blur">
+                        <img src="img/regions/dnipro.svg" alt="Дніпропетровська обл.">
+                     </div>
+                     <a href="#dnipro" title="Дніпропетровська область" class="dnipro__region dnipro__region--scale">
+                        <img src="img/regions/dnipro.svg" alt="Дніпропетровська обл.">
+                        <p>Дніпропетровська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region volyn">
+                  <div class="volyn__position">
+                     <div class="volyn__region volyn__region--blur">
+                        <img src="img/regions/volyn.svg" alt="Волинська обл.">
+                     </div>
+                     <a href="#volyn" title="Волинська область" class="volyn__region volyn__region--scale">
+                        <img src="img/regions/volyn.svg" alt="Волинська обл.">
+                        <p>Волинська<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region vinnytsia">
+                  <div class="vinnytsia__position">
+                     <div class="vinnytsia__region vinnytsia__region--blur">
+                        <img src="img/regions/vinnytsia.svg" alt="Вінницька обл.">
+                     </div>
+                     <a href="#vinnytsia" title="Вінницька область" class="vinnytsia__region vinnytsia__region--scale">
+                        <img src="img/regions/vinnytsia.svg" alt="Вінницька обл.">
+                        <p>Вінницька<br> <small>область</small></p>
+                     </a>
+                  </div>
+               </div>
+               <div class="map__region crimea">
+                  <div class="crimea__position">
+                     <div class="crimea__region crimea__region--blur">
+                        <img src="img/regions/crimea.svg" alt="Автономна республіка Крим">
+                     </div>
+                     <a href="#crimea" title="Автономна республіка Крим" class="crimea__region crimea__region--scale">
+                        <img src="img/regions/crimea.svg" alt="Автономна республіка Крим">
+                        <p>Крим <br><small>aвтономна республіка</small></p>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="target">
+            <div class="target__items">
+               <div class="target__item kyiv">
+                  <a href="#" class="kyiv__window" id="kyiv">
+                     <div class="kyiv__facts facts">
+                        <h2>Київська область</h2>
+                        <p>Єдина область в Україні, яка має ексклав у вигляді міста – Славутич на території Чернігівської області.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image25.jpeg" alt="25">
+                        </div>
+                        <p>Знаменита трипільська археологічна культура отримала свою назву на честь села Трипілля на Київщині. Ця землеробська
+                        культура розквітла понад 7 тисяч років тому і досягла неймовірних , як на той час, технологічних висот. Колесо,
+                        дерев’яний плуг, гончарство, виплавка міді.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image26.jpeg" alt="26">
+                        </div>
+                        <p>Найглибша станція метро у світі знаходиться у Києві. Вона розташована на глибині 105,5 м. Це станція метро Арсенальна.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image27.jpeg" alt="27">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item sumy">
+                  <a href="#" class="sumy__window" id="sumy">
+                     <div class="sumy__facts facts">
+                        <h2>Сумська область</h2>
+                        <p>У Путивлі на Сумщині у ХІІ ст. відбуваються події описані у Слові а Полку Ігоревім . Тут чекає і плаче Ярославна за
+                        князем Ігорем Святославовичем.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image38.jpeg" alt="38">
+                        </div>
+                        <p>У місті Кролевець росте унікальна яблуня-колонія на території 10 соток . Це все одне дерево, що росте кущем, а гілки
+                        дерева приросли до землі. Яблуні вже понад 200 років і спроби посадити подібну яблуню у іншому місті поки не дали жодних
+                        результатів.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image39.jpeg" alt="39">
+                        </div>
+                        <p>Місто Глухів на Сумщині – остання гетьманська столиця . Саме тоді тут розквітла золота доба козацького, або
+                        мазепинського барокко, унікального українського архітектурного стилю.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image40.jpeg" alt="40">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item chernihiv">
+                  <a href="#" class="chernihiv__window" id="chernihiv">
+                     <div class="chernihiv__facts facts">
+                        <h2>Чернігівська область</h2>
+                        <p>Рамковий вулик – винайшов на Чернігівщині Петро Прокопович, український бджоляр давнього козацького роду.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image52.jpeg" alt="52">
+                        </div> -->
+                        <p>Один з найгарніших будинків Чернігова – дім пожежного товариства. Побудований понад 100 р тому. Він має наглядову вежу
+                        заввишки 20 м.</p>
+                        <div class="facts__image">
+                        <img src="img/regions__image/image54.jpeg" alt="54">
+                        </div>
+                        <p>Ніжинські огірочки стали настільки популярним і поширеним продуктом, що у Ніжині навіть поставили їм пам’ятник. Цікаво,
+                        що огірок цей не фарбований, а виготовлений із зеленого італійського граніту.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image55.jpeg" alt="55">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item chernivci">
+                  <a href="#" class="chernivci__window" id="chernivci">
+                     <div class="chernivci__facts facts">
+                        <h2>Чернівецька область</h2>
+                        <p>Туристичною візитівкою Чернівців є колишня резиденція митрополитів Буковини і Долмазії ХІХ ст. Цей архітектурний
+                        ансамбль включений до реєстру світової спадщини ЮНЕСКО.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image52.jpeg" alt="52">
+                        </div>
+                        <p>Чернівецька область – найменша серед усіх областей України, її площа трохи більша 8 тис км2.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image39.jpeg" alt="39">
+                        </div> -->
+                        <p>Щодня о 12.00 на вежу Чернівецької Ратуші піднімається трубач у колоритному буковинському одязі і відтворює мелодію
+                        безсмертної пісні «Марічка».</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image53.jpeg" alt="53">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item cherkasy">
+                  <a href="#" class="cherkasy__window" id="cherkasy">
+                     <div class="cherkasy__facts facts">
+                        <h2>Черкаська область</h2>
+                        <p>У Черкасах є своя вулиця Хрещатик, а площу біля обласної державної адміністрації перейменували рекордних 8 разів (
+                        Базарна 1879-1911, Соборно-Миколаївська 1911-1925, Базарна 1925-1941, Соборна 1941-1943, Базарна 1943-1954, центральна
+                        1954-1969, Леніна 1969 – 2010, Соборна 2010).</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image49.jpeg" alt="49">
+                        </div>
+                        <p>На Черкащині дуже багато дерев – довгожителів. Серед них найвідоміші – дуб Максима Залізняка-1100 років, сосна Гоголя –
+                        понад 300 років, дуби Шевченка у селі Будище на Звенигородщені – понад 1000 років.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image50.jpeg" alt="50">
+                        </div>
+                        <p>Туристична столиця Черкащини – Софіївський парк в Умані, який був заснований у 1796 р. Щорічно цей райський куточок
+                        відвідують біля 150 тис туристів.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image51.jpeg" alt="51">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item khmelnytskyi">
+                  <a href="#" class="khmelnytskyi__window" id="khmelnytskyi">
+                     <div class="khmelnytskyi__facts facts">
+                        <h2>Хмельницька область</h2>
+                        <p>Одна з найбільших веж стародавньої Кам’янець-Подільської фортеці називається Папською, бо була відремонтована за гроші
+                        Папи Юлія ІІ.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image46.jpeg" alt="46">
+                        </div>
+                        <p>Богдан Хмельницький ніколи не бував у місті, яке 1954 р перейменували на його честь. Зате у Хмельницькому можна знайти
+                        найбільше пам’ятників Богдану Хмельницькому , аж 4.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image47.jpeg" alt="47">
+                        </div>
+                        <p>Найстаріший водяний млин України збудований на початку ХІХ ст знаходиться і досі працює у містечку Сатанів Хмельницької
+                        області. Тут збереглася унікальна професія – оператор водяного млина.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image48.jpeg" alt="48">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item kherson">
+                  <a href="#" class="kherson__window" id="kherson">
+                     <div class="kherson__facts facts">
+                        <h2>Херсонська область</h2>
+                        <p>Олешківські піски – це величезний піщаний масив. Щоб зупинити його розповзання по краям масиву висадили близько 100 тис
+                        га соснових лісів. Це є найбільшим штучним лісом у світі.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image43.jpeg" alt="43">
+                        </div>
+                        <p>На Херсонщині, на березі Дніпровського лиману, знаходиться найвищий маяк України Аджигольський. Він сягає 76 м заввишки
+                        і має не звичайну гіперболоїдну конструкцію.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image44.jpeg" alt="44">
+                        </div>
+                        <p>Найбільший острів України та Чорного моря називається Джаралгач. На всій площі острова, а це 56 км2 не проживає жодної
+                        людини.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image45.jpeg" alt="45">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item kharkiv">
+                  <a href="#" class="kharkiv__window" id="kharkiv">
+                     <div class="kharkiv__facts facts">
+                        <h2>Харківська область</h2>
+                        <p>Співаючі тераси в селі Городнє – це унікальний сад на пагорбі, що складається з терас звернених пів кільцем на південь.
+                        За вітряної погоди тут виникають надзвичайні акустичні етюди.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image42.jpeg" alt="42">
+                        </div>
+                        <p>Харківські вчені розщепили ядро атома другими у світі. Це сталося 10. 10.1932року в українському фізико-технічному
+                        інституті.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image44.jpeg" alt="44">
+                        </div> -->
+                        <p>Ринок Барабашово найбільший промислово-речовий ринок України. Він має площу понад 75 га і понад 15 тис торгових та
+                        складських точок.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image45.jpeg" alt="45">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item ternopil">
+                  <a href="#" class="ternopil__window" id="ternopil">
+                     <div class="ternopil__facts facts">
+                        <h2>Тернопільська область</h2>
+                        <p>Тернопільська область на першому місті в Україні за кількістю замків . Їх тут 34.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image41.jpeg" alt="41">
+                        </div> -->
+                        <p>Оптимістична печера у Борщівському районі , найдовша у світі гіпсова печера, найдовша печера Євразії та п’ята за
+                        довжиною печера світу.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image44.jpeg" alt="44">
+                        </div> -->
+                        <p>Плебанівський залізничний віадук біля міста Теребовля побудований у 1896 р Австро-Угорщиною. Цей віадук є однією з 12
+                        подібних конструкцій у світі.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image41.jpeg" alt="41">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item rivne">
+                  <a href="#" class="rivne__window" id="rivne">
+                     <div class="rivne__facts facts">
+                        <h2>Рівненська область</h2>
+                        <p>У місті Острозі на Рівненщині у 1576 р була заснована Острозька академія, найстаріший університет не лише в Україні, а і
+                        у всій східній Європі.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image35.jpeg" alt="35">
+                        </div>
+                        <p>Знаменитий тунель кохання біля міста Клевань утворився завдяки проходженню потягу через лісовий масив. Потяг постійно
+                        обтесує кущі і гілки навколо себе . Внаслідок цього утворився щільний коридор точної арочної форми.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image36.jpeg" alt="36">
+                        </div>
+                        <p>В Рівненському бурштині виявили понад 60 різних видів мурах. Рівненський бурштин утворився близько 40 млн років тому,
+                        коли територія сучасної України була островом, а територія сусідніх Білорусії та Польщі – морем.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image37.jpeg" alt="37">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item poltava">
+                  <a href="#" class="poltava__window" id="poltava">
+                     <div class="poltava__facts facts">
+                        <h2>Полтавська область</h2>
+                        <p>Українська літературна мова почала формуватися завдяки зусиллям Івана Котляревського, котрий першим написав свою поему
+                        Енеїда українською розмовною мовою., а народився і жив він саме на Полтавщині.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image35.jpeg" alt="35">
+                        </div> -->
+                        <p>У Полтаві діє принаймні 22 заклади громадського харчування де можна скуштувати галушки.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image36.jpeg" alt="36">
+                        </div> -->
+                        <p>У Полтаві існує місцевість під назвою колонія. Вона так називається бо у ХІХ ст. коли Англія ввела санкції проти Росії і
+                        перестала постачати їй сукно , Губернатор Полтавщини запросив німців , які облаштували тут швейну фабрику.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image37.jpeg" alt="37">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item odessa">
+                  <a href="#" class="odessa__window" id="odessa">
+                     <div class="odessa__facts facts">
+                        <h2>Одеська область</h2>
+                        <p>Найбільша область в Україні. Тут також проживає рекордна для України кількість національностей – понад 130.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image35.jpeg" alt="35">
+                        </div> -->
+                        <p>Стара частина Одеси побудована з ракушняку. Це гірська порода, що складається з черепашок морських тварин. Через
+                        інтенсивне видобування цього каменю під містом утворилася мережа катакомб завдовжки 1000 км.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image34.jpeg" alt="34">
+                        </div>
+                        <p>На західній півкулі близько 14 населених пунктів мають назву Одеса. Більшість знаходяться в США. Також є 2 Одеси в
+                        Канаді і одна Нова Одеса в Бразилії.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image37.jpeg" alt="37">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item mykolayiv">
+                  <a href="#" class="mykolayiv__window" id="mykolayiv">
+                     <div class="mykolayiv__facts facts">
+                        <h2>Миколаївська область</h2>
+                        <p>На Миколаївщині розташований Актовський каньйон з гарантованим ВАУ ефектом краєвидів. Тут протягом тисячоліть річка
+                        Мертвовод прорізала собі русло крізь гранітні скелі на глибину до 50 метрів.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image32.jpeg" alt="32">
+                        </div>
+                        <p>Миколаїв – місто унікальних мостів. Тут Варварський міст – єдиний в Україні з горизонтальним розведенням. А інший
+                        розвідний міст Миколаєва – Інгульській – до 1996 р мав найдовшу розвідну частину в Європі, понад 76 м.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image33.jpeg" alt="33">
+                        </div>
+                        <p>Найдовшою пішохідною вулицею в Україні є вулиця Соборна в Миколаєві. ЇЇ пішохода частина завдовжки більше 1 км.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image37.jpeg" alt="37">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item lviv">
+                  <a href="#" class="lviv__window" id="lviv">
+                     <div class="lviv__facts facts">
+                        <h2>Львівська область</h2>
+                        <p>Вперше в українській історії задокументований футбольний матч відбувся 14 липня 1894 р у Львові. Змагалися дві команди
+                        товариства Сокіл. Львівська та Краківська.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image32.jpeg" alt="32">
+                        </div> -->
+                        <p>Біля міста Миколаїв на Львівщині знаходиться мальовничий грот Прийма. Тут знайшли залишки неандертальців, яким понад
+                        46тисяч років. Вони мали з собою списи з кам’яними наконечниками і розводили багаття.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image31.jpeg" alt="31">
+                        </div>
+                        <p>Із 500 мінеральних джерел України 100 знаходиться на Львівщині. Цілком ймовірно, що цей факт впливає на те, що область
+                        одна з лідерів і за кількістю довгожителів і за середньою тривалістю життя.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image37.jpeg" alt="37">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item luhansk">
+                  <a href="#" class="luhansk__window" id="luhansk">
+                     <div class="luhansk__facts facts">
+                        <h2>Луганська область</h2>
+                        <p>Цікаво, що найстаріша вулиця міста Луганська до 1922 р називалася Англійською. ЇЇ називали так через те, що вздовж цієї
+                        єдиної на той час вулиці селилися англійські інженери, запрошені для роботи на чавуноливарному заводі.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image32.jpeg" alt="32">
+                        </div> -->
+                        <p>Одним з перших популізаторів картоплі на території України був луганський купець Савелій Хрипко. Він у 1843 р вперше
+                        засадив поле картоплею в Луганській області.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image31.jpeg" alt="31">
+                        </div> -->
+                        <p>За 15 км на північ від Сватового є загадкова преображенська печера довжиною понад 230 м. Це штучна печера. ЇЇ вперше
+                        дослідили 50 років тому. Вона має ознаки монастиря з келіями. Однак, ані лежанок, ані інших слідів проживання там людей
+                        не знайшли.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image30.jpeg" alt="30">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item kirovohrad">
+                  <a href="#" class="kirovohrad__window" id="kirovohrad">
+                     <div class="kirovohrad__facts facts">
+                        <h2>Кіровоградська область</h2>
+                        <p>Тут розташований унікальний музей ракетних військ стратегічного призначення . Тут можна побачити у незмінному вигляді
+                        пусковий пункт міжконтинентальних ядерних ракет в шахті на глибині 35 м і навіть самі ракети.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image28.jpeg" alt="28">
+                        </div>
+                        <p>На Кіровоградщині знаходиться цікавий затоплений кар’єр під назвою Морозівський вугільний розріз. Він завдовжки 6 км. На
+                        його території знаходяться залишки величезних екскаваторів, а через кар’єр перекинутий великий міст привезений у якості
+                        трофею з Німеччини.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image29.jpeg" alt="29">
+                        </div>
+                        <p>На території Кіровоградщини з 1752 по 1764 рр. існувала область з назвою Нова Сербія. Так імператриця Єлизавета
+                        намагалася заселити цю територію сербами з Австрійської імперії. Але згодом імперська влада згорнула цей проект . а
+                        сербів репресувала.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image30.jpeg" alt="30">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item ivano-frankivsk">
+                  <a href="#" class="ivano-frankivsk__window" id="ivano-frankivsk">
+                     <div class="ivano-frankivsk__facts facts">
+                        <h2>Івано-Франківська область</h2>
+                        <p>У щорічному рейтингу журналу Фокус Івано – Франківськ двічі визнавався найкращим для життя містом України. Протягом 300
+                        років місто Івано – Франківськ носило назву Станіславів, поки не було перейменоване у 1962 році.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image23.jpeg" alt="28">
+                        </div>
+                        <p>На Івано-Франківщині розташований найбільший гірськолижний курорт України Буковель. Найвища точка курорту – гора Довга
+                        -1372 м.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image24.jpeg" alt="29">
+                        </div>
+                        <!-- <p></p> -->
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image30.jpeg" alt="30">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item zaporizhzhya">
+                  <a href="#" class="zaporizhzhya__window" id="zaporizhzhya">
+                     <div class="zaporizhzhya__facts facts">
+                        <h2>Запорізька область</h2>
+                        <p>На території Запорізької області розташована найпотужніша ГЕС України – Дніпрогес, а також найпотужніша АЕС в Європі –
+                        Запорізька АЕС.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image20.jpeg" alt="28">
+                        </div>
+                        <p>Острів Хортиця в Запоріжжі є найбільшим річковим островом країни . Задовго перед запорожцями цей острів облюбували скіфи
+                        і половці, які залишили тут чимало кам’яних баб після себе.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image21.jpeg" alt="29">
+                        </div>
+                        <p>В Запорізькій області знаходиться курган Солоха в якому на початку ХХ ст. знайшли знаменитий золотий скіфський гребінь
+                        із левами та вершниками.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image22.jpeg" alt="30">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item zakarpattia">
+                  <a href="#" class="zakarpattia__window" id="zakarpattia">
+                     <div class="zakarpattia__facts facts">
+                        <h2>Закарпатська область</h2>
+                        <p>Найбільш високогірне місто в Україні – Рахів. Місто розташоване на висоті 820 м над рівнем моря.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image18.jpeg" alt="18">
+                        </div>
+                        <p>Найдовший в Україні Безкидський тунель завдовжки 1747 м. Цей тунель був споруджений ще за часів Австро-Угорщини у 1886
+                        році.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image19.jpeg" alt="19">
+                        </div>
+                        <p>Неймовірно, але від Ужгорода ближче до десяти інших європейських столиць ніж до Києва.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image22.jpeg" alt="30">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item zhytomyr">
+                  <a href="#" class="zhytomyr__window" id="zhytomyr">
+                     <div class="zhytomyr__facts facts">
+                        <h2>Житомирська область</h2>
+                        <p>У цій області виробляється кожна четверта пачка морозива і найбільша кількість меду в Україні.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image16.jpeg" alt="16">
+                        </div>
+                        <p>На Житомирщині знаходиться геологічний заказник Кам’яне село. Тут на площі 15 га лежать величезні кам’яні брили.
+                        Найімовірніше, що це залишки зруйнованих часом гірських порід.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image17.jpeg" alt="17">
+                        </div>
+                        <p>Завод із виготовлення українських банкнот знаходиться на Житомирщині у місті Малин. Цікаво, що на цьому заводі
+                        виготовлення найдорожчої купюри із сучасними захисними елементами коштує для НБУ всього 60 копійок.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image22.jpeg" alt="30">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item donetsk">
+                  <a href="#" class="donetsk__window" id="donetsk">
+                     <div class="donetsk__facts facts">
+                        <h2>Донецька область</h2>
+                        <p>Курортне місто Донеччини – Святогірськ, знамените своїм унікальним печерним монастирем, висіченим у білосніжній
+                        крейдяній скелі, що височить над Сіверським Донцем.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image13.jpeg" alt="13">
+                        </div>
+                        <p>На Донеччині існують своя Ялта, Гурзуф та ще низка населених пунктів із Кримськими назвами .
+                        Їх заснували кримські греки , яких у ХVІІІст. пересилила з Криму Катерина ІІ.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image14.jpeg" alt="14">
+                        </div>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image15.jpeg" alt="15">
+                        </div>
+                        <p>Знаменита пісня «Дивлюсь я на небо та й думку гадаю» була написана уродженцем Донеччини Михайлом Петренком. Цікаво, що
+                        вона є однією з двох перших пісень , що були виконані у космосі.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image22.jpeg" alt="30">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item dnipro">
+                  <a href="#" class="dnipro__window" id="dnipro">
+                     <div class="dnipro__facts facts">
+                        <h2>Дніпропетровська область</h2>
+                        <p>В місті Дніпро розташована найдовша в Європі набережна, завдовжки 23 км, а її краєвид просто заворожує. Майже Нью-Йорк.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image11.jpeg" alt="11">
+                        </div>
+                        <p>Кривий Ріг – найдовше місто Європи довжиною 126 км. Воно є найбільшим містом України, що не є обласним центром. Його
+                        населення складає понад 630 тис жителів.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image12.png" alt="12">
+                        </div>
+                        <p>Дніпропетровська область є найбільш урбанізованою областю України. Тут у Містах проживає біля 83 % населення.</p>
+                        <!-- <div class="facts__image">
+                           <img src="img/regions__image/image22.jpeg" alt="30">
+                        </div> -->
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item volyn">
+                  <a href="#" class="volyn__window" id="volyn">
+                     <div class="volyn__facts facts">
+                        <h2>Волинська область</h2>
+                        <p>Луцький замок, або замок Любарта, можна побачити на купюрі номіналом 200 грн. Його почав будувати у 1350-ті роки
+                        останній самостійний правитель Галицько-Волинської держави Любарт.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image8.webp" alt="8">
+                        </div>
+                        <p>Найдовший будинок Європи знаходиться в Луцьку. З урахуванням відгалужень, довжина будинку складає 2775 метрів. Будівля
+                        утворена з 40 сполучених між собою будинків. Усього у будинку 120 під’їздів.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image9.webp" alt="9">
+                        </div>
+                        <p>Озеро Світязь, яке розташоване у межах Шатського району Волинської області є найглибшим в Україні. Його глибина сягає 58
+                        метрів.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image10.jpeg" alt="10">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item vinnytsia">
+                  <a href="#" class="vinnytsia__window" id="vinnytsia">
+                     <div class="vinnytsia__facts facts">
+                        <h2>Вінницька область</h2>
+                        <p>У Вінниці розташований найбільший у Європі плавучий фонтан. Унікальна технологія зимування дозволяє конструкції
+                        занурюватися під воду з настанням морозів.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image5.jpeg" alt="5">
+                        </div>
+                        <p>Вінницька телевежа висотою 354 метри є найвищою у світі спорудою із трубчатої сталі. Стовбур вежі являє собою сталевий
+                        циліндр діаметром 2.5 метри в середині якого курсує ліфт. Вінницька телевежа на 30 м вища за Ейфелеву.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image6.jpeg" alt="6">
+                        </div>
+                        <p>Вінницька область межує аж з сімома іншими областями та ще й з Молдовою. Жоден інший регіон не має стількох сусідів.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image7.jpeg" alt="7">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="target__item crimea">
+                  <a href="#" class="crimea__window" id="crimea">
+                     <div class="crimea__facts facts">
+                        <h2>Автономна республіка Крим</h2>
+                        <p>Південний берег Криму має унікальний для України субтропічний клімат. Він існує у цьому місці завдяки теплим
+                        чорноморським течіям та Кримським горам, які перешкоджають руху холодних циклонів . Тут ростуть різноманітні пальми,
+                        кипарис, маслини.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image1.jpeg" alt="1">
+                        </div>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image2.jpeg" alt="2">
+                        </div>
+                        <p>Чума, яка у ХХІV ст. скосила пів Європи, вперше була зафіксована саме в Криму. Звідти її привезли генуезці коли покинули
+                        свою колонію після падіння фортеці Феодосія під натиском війська золотої орди.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image3.jpeg" alt="3">
+                        </div>
+                        <p>Найдовший у світі тролейбусний маршрут знаходиться в Криму. Він з’єднує Сімферополь та Ялту. Його довжина складає 86 км.</p>
+                        <div class="facts__image">
+                           <img src="img/regions__image/image4.jpeg" alt="4">
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="footer__text">
+            © Skorpion_TGR
+         </div>
+      </footer>
+   </div>
+</body>
+</html>

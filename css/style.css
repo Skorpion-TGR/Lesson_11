@@ -1,0 +1,635 @@
+@import url(null.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
+
+@font-face {
+   font-family: 'thornvalley';
+      src: url("../fonts/thorn-valley-font/ThornValley-MVAqw.woff2") format("woff2"),
+      url("../fonts/thorn-valley-font/ThornValley-MVAqw.woff") format("woff");
+   font-display: swap;
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'calligraph';
+   src: url("../fonts/calligraph/AnyConv.com__Calligraph.woff2") format("woff2"),
+      url("../fonts/calligraph/AnyConv.com__Calligraph.woff") format("woff");
+   font-display: swap;
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'cassandra';
+   src: url("../fonts/cassandra/AnyConv.com__Cassandra.woff2") format("woff2"),
+      url("../fonts/cassandra/AnyConv.com__Cassandra.woff") format("woff");
+   font-display: swap;
+   font-weight: 400;
+   font-style: normal;
+}
+
+
+body{
+   max-width: 100%;
+   max-height: 100vh;
+   position: relative;
+   background-color: #0057B8;
+   font-family: 'thornvalley';
+}
+
+/* :hover{
+   transition: 1s scale, 1s opacity, 1s visibility;
+} */
+
+:focus{
+   outline: none;
+   border: none;
+}
+
+a{
+   display: inline-block;
+}
+
+img{
+   max-width: 100%;
+}
+
+.wrapper {
+   position: relative;
+   max-width: 2400px;
+}
+/* 
+.header {
+} */
+
+.header__container{
+   padding: 20px;
+   max-width: 800px;
+   margin: 0 auto;
+   text-align: center;
+   font-family: 'cassandra';
+   margin-bottom: 20px;
+   color: #FFD700;
+   text-shadow: 0 0 1px #0057B8,
+   0 0 2px #0057B8;
+   filter: drop-shadow(0 0 10px #FFD700) contrast(125%);
+   letter-spacing: 1.5px;
+
+}
+
+.header__title{
+   font-size: 56px;
+   line-height: 1.5;
+}
+
+.header__text{
+   font-size: 36px;
+}
+/* 
+.main {} */
+
+.map {
+   width: 100%;
+   height: 100vh;
+}
+
+/* .map::before{
+   content: '';
+   display: inline-block;
+   width: 100%;
+   height: 100vh;
+   background: url(../img/map1.svg) 0 0 / 100% no-repeat;
+   transform: scale(1.2);
+   position: absolute;
+   top: 50%;
+   left: 50%; */
+   /* right: 0; */
+   /* transform: translate(-50% -50%);
+   text-align: center;
+} */
+
+.map__regions {
+   position: absolute;
+   max-width: 1120px;
+   max-height: 751px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.map__regions::before{
+   content: '';
+   display: inline-block;
+   background: url(../img/map1.svg) 0 0 / 100% no-repeat;
+   width: 1120px;
+   height: 751px;
+   /* width: 100%; */
+   /* height: 100%; */
+   transform: scale(1.05);
+   filter: drop-shadow(0 0 100px #FFD700) brightness(125%) blur(20px);
+}
+/* 
+.map__region {
+} */
+/* 
+.kyiv {
+} */
+
+/* .kyiv--position {
+   position: absolute;
+   left: 39.61%;
+   right: 44.51%;
+   top: 11.88%;
+   bottom: 58.03%;
+} */
+
+
+[class*="__position"]:not(:hover) {
+   filter: brightness(75%);
+}
+
+.map__region:hover [class*="__position"]{
+   z-index: 1;
+}
+
+.map__region:hover [class*="--scale"]{
+   transform: scale(1.1);
+   /* transition: all 1s linear 0s; */
+}
+
+.map__region:hover [class*="--blur"] {
+   display: block;
+   transform: scale(1.2);
+   filter: contrast(175%) blur(7px);
+   /* transition: all 1s linear 0s; */
+}
+
+.map__region:hover [class*="scale"] p{
+   display: block;
+}
+
+[class*="scale"]{
+   transition: all 0.5s linear 0s;
+   /* background-color: aquamarine; */
+   position: relative;
+}
+
+[class*="scale"] p {
+   transition: all 0.5s linear 0s;
+   position: absolute;
+   /* left: 0;
+   right: 0;
+   top: 25%;
+   margin: 0 auto;
+   text-align: center; */
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   font-weight: 700;
+   font-size: 32px;
+   color: #0057B8;
+   text-shadow:
+      0 0 1px #FFD700,
+      0 0 2px #FFD700,
+      0 0 3px #0057B8,
+      0 0 4px #FFD700,
+      0 0 5px #FFD700,
+      0 0 15px #0057B8;
+   display: none;
+   letter-spacing: 2px;
+   filter: contrast(125%);
+   /* background-color: aqua; */
+}
+
+p small{
+   font-size: 24px;
+}
+
+[class*=blur]{
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+[class*="__window"]:target{
+   display: inline-block;
+   z-index: 2;
+}
+
+/* [class*="__region"]{
+   position: absolute;
+   top: 0;
+   left: 0;
+} */
+
+/* .kyiv__region {
+   position: absolute;
+   top: 0;
+   left: 0;
+} */
+/* 
+.kyiv__region--scale {}
+
+.kyiv__region--blur {}
+
+.target {
+}
+
+.target__items {}
+
+.target__item {
+} */
+
+[class*="__window"]{
+   position: absolute;
+   /* top: 12.5%; */
+   /* left: 12.5%; */
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+   text-align: center;
+   width: 1230px;
+   /* background-image: linear-gradient(to bottom, hsla(212, 100%, 36%, 0.2), hsla(51, 100%, 50%, 0.2));
+   box-shadow: 0 0 200px 0 linear-gradient(to bottom, hsla(212, 100%, 36%, 0.2), hsla(51, 100%, 50%, 0.2)); */
+}
+
+[class*="__facts"]::before{
+   content: '';
+   display: inline-block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   filter:contrast(150%) brightness(60%) blur(15px);
+   transform: scale(1.15);
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   opacity: 0.7;
+}
+
+[class*="__facts"]::after {
+   content: '';
+   display: inline-block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+   filter: drop-shadow(0 0 25px #FFD700) brightness(95%) blur(0.5px);
+   /* transform: scale(1.1); */
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   opacity: 0.7;
+}
+/* 
+.kyiv {} */
+
+.facts{
+   position: relative;
+}
+
+.facts *{
+   max-width: 75%;
+   margin: 0 auto;
+   text-align: center;
+   font-family: 'calligraph';
+   /* font-family: 'cassandra'; */
+   color: #0057B8;
+   text-shadow: 0 0 1px #FFD700,
+   0 0 2px #FFD700,
+   0 0 3px #FFD700,
+   0 0 4px #FFD700,
+   /* 0 0 5px #FFD700, */
+   0 15px 10px #0057B8;
+   letter-spacing: 5px;
+   word-spacing: 5px;
+   /* font-weight: 900; */
+   /* background-color: #0057B8; */
+}
+
+.facts *:not(:last-child){
+   margin-bottom: 15px;
+}
+
+.facts__image{
+   max-width: 11vmax;
+   /* max-height: 20vh; */
+}
+
+.facts__image img{
+   box-shadow: 0 15px 90px 0 #0057B8;
+}
+
+.facts__image:hover{
+   position: relative;
+   transform: scale(2);
+   z-index: 2;
+}
+
+.facts h2{
+   font-size: 60px;
+   line-height: 2;
+   filter: contrast(175%) brightness(125%);
+}
+
+.facts p{
+   line-height: 1.3;
+   /* filter: drop-shadow(150%); */
+   filter: contrast(150%) brightness(125%);
+   font-size: 24px;
+   font-family: 'Ruslan Display', cursive;
+   font-weight: 400;
+}
+
+.kyiv__position {
+   position: absolute;
+   top: 89.21px;
+   left: 443.62px;
+}
+
+.kyiv__facts::before,
+.kyiv__facts::after {
+   background: url(../img/regions/kyiv.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.sumy__position {
+   position: absolute;
+   top: 1.78px;
+   left: 671.1px;
+}
+
+.sumy__facts::before,
+.sumy__facts::after {
+   background: url(../img/regions/sumy.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.chernihiv__facts::before,
+.chernihiv__facts::after {
+   background: url(../img/regions/сhernihiv.svg) 50% 50% / auto 100% no-repeat;
+}
+.chernihiv__position {
+   position: absolute;
+   top: 1px;
+   left: 520.34px;
+}
+
+.chernivci__facts::before,
+.chernivci__facts::after {
+   background: url(../img/regions/chernivci.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.chernivci__position {
+   position: absolute;
+   top: 361.7px;
+   left: 174.26px;
+}
+
+.cherkasy__facts::before,
+.cherkasy__facts::after {
+   background: url(../img/regions/cherkasy.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.cherkasy__position {
+   position: absolute;
+   top: 211.39px;
+   left: 463.56px;
+}
+
+.khmelnytskyi__facts::before,
+.khmelnytskyi__facts::after {
+   background: url(../img/regions/khmelnytskyi.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.khmelnytskyi__position {
+   position: absolute;
+   top: 178.66px;
+   left: 249.98px;
+}
+
+.kherson__facts::before,
+.kherson__facts::after {
+   background: url(../img/regions/kherson.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.kherson__position {
+   position: absolute;
+   top: 463.59px;
+   left: 582.06px;
+}
+
+.kharkiv__facts::before,
+.kharkiv__facts::after {
+   background: url(../img/regions/kharkiv.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.kharkiv__position {
+   position: absolute;
+   top: 193.79px;
+   left: 789.03px;
+}
+
+.ternopil__facts::before,
+.ternopil__facts::after {
+   background: url(../img/regions/ternopil.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.ternopil__position {
+   position: absolute;
+   top: 210.05px;
+   left: 160.6px;
+}
+
+.rivne__facts::before,
+.rivne__facts::after {
+   background: url(../img/regions/rivne.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.rivne__position {
+   position: absolute;
+   top: 45.61px;
+   left: 182.66px;
+}
+
+.poltava__facts::before,
+.poltava__facts::after {
+   background: url(../img/regions/poltava.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.poltava__position {
+   position: absolute;
+   top: 182.59px;
+   left: 617.11px;
+}
+
+.odessa__facts::before,
+.odessa__facts::after {
+   background: url(../img/regions/odessa.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.odessa__position {
+   position: absolute;
+   top: 404.3px;
+   left: 377.21px;
+}
+
+.mykolayiv__facts::before,
+.mykolayiv__facts::after {
+   background: url(../img/regions/mykolayiv.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.mykolayiv__position {
+   position: absolute;
+   top: 404.52px;
+   left: 501.75px;
+}
+
+.lviv__facts::before,
+.lviv__facts::after {
+   background: url(../img/regions/lviv.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.lviv__position {
+   position: absolute;
+   top: 173.06px;
+   left: 32.47px;
+}
+
+.luhansk__facts::before,
+.luhansk__facts::after {
+   background: url(../img/regions/luhansk.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.luhansk__position {
+   position: absolute;
+   top: 229.66px;
+   left: 975.4px;
+}
+
+.kirovohrad__facts::before,
+.kirovohrad__facts::after {
+   background: url(../img/regions/kirovohrad.svg) 50% 50% / auto 70% no-repeat;
+}
+
+.kirovohrad__position {
+   position: absolute;
+   top: 306.44px;
+   left: 472.52px;
+}
+
+.ivano-frankivsk__facts::before,
+.ivano-frankivsk__facts::after {
+   background: url(../img/regions/ivano-frankivsk.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.ivano-frankivsk__position {
+   position: absolute;
+   top: 281.45px;
+   left: 87.8px;
+}
+
+.zaporizhzhya__facts::before,
+.zaporizhzhya__facts::after {
+   background: url(../img/regions/zaporizhzhya.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.zaporizhzhya__position {
+   position: absolute;
+   top: 412.93px;
+   left: 749.5px;
+}
+
+.zakarpattia__facts::before,
+.zakarpattia__facts::after {
+   background: url(../img/regions/zakarpattia.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.zakarpattia__position {
+   position: absolute;
+   top: 323.26px;
+   left: 1px;
+}
+
+.zhytomyr__facts::before,
+.zhytomyr__facts::after {
+   background: url(../img/regions/zhytomyr.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.zhytomyr__position {
+   position: absolute;
+   top: 73.3px;
+   left: 314.71px;
+}
+
+.donetsk__facts::before,
+.donetsk__facts::after {
+   background: url(../img/regions/donetsk.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.donetsk__position {
+   position: absolute;
+   top: 309.36px;
+   left: 893.75px;
+}
+
+.dnipro__facts::before,
+.dnipro__facts::after {
+   background: url(../img/regions/dnipro.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.dnipro__position {
+   position: absolute;
+   top: 313.95px;
+   left: 673.78px;
+}
+
+.volyn__facts::before,
+.volyn__facts::after {
+   background: url(../img/regions/volyn.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.volyn__position {
+   position: absolute;
+   top: 43.48px;
+   left: 91.61px;
+}
+
+.vinnytsia__facts::before,
+.vinnytsia__facts::after {
+   background: url(../img/regions/vinnytsia.svg) 50% 50% / auto 100% no-repeat;
+}
+
+.vinnytsia__position {
+   position: absolute;
+   top: 247.15px;
+   left: 325.8px;
+}
+
+.crimea__facts::before,
+.crimea__facts::after {
+   background: url(../img/regions/crimea.svg) 50% 50% / auto 70% no-repeat;
+}
+
+.crimea__position {
+   position: absolute;
+   top: 587.68px;
+   left: 642.65px;
+}
+
+.footer__text{
+   width: 500px;
+   margin: 0 auto;
+   text-align: center;
+   color: red;
+   padding: 10px;
+   text-shadow: 0 0 1px black;
+   font-family: 'cassandra';
+   font-size: 24px;
+   filter: contrast(150%) drop-shadow(0 0 10px red);
+}
